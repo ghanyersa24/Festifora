@@ -4,6 +4,7 @@
   --primary: #0a2647;
   --dark: #001731;
   --white: #fff;
+  --orange: #ec831e;
 }
 html {
   scroll-behavior: smooth;
@@ -124,7 +125,7 @@ aside {
   margin-bottom: 20px;
 }
 #information li h3 {
-  color: #ec831e;
+  color: var(--orange);
   margin: 0px;
   margin-bottom: 4px;
 }
@@ -139,4 +140,40 @@ footer {
   background-color: var(--primary);
   text-align: center;
   font-weight: bold;
+}
+#btn-navbar,
+nav label {
+  display: none;
+}
+@media screen and (max-width: 1000px) {
+  #content,
+  aside {
+    width: 100%;
+    padding: 0;
+  }
+  #information {
+    margin-left: 0;
+  }
+  #btn-navbar,
+  nav label {
+    display: block;
+  }
+  nav ul li {
+    display: block;
+    margin: 20px 0;
+  }
+  nav ul {
+    display: none;
+    padding-left: 20px;
+  }
+  #btn-navbar {
+    display: none;
+  }
+  nav img {
+    width: 30px;
+    margin-left: 15px;
+  }
+  #btn-navbar:checked ~ ul {
+    display: block;
+  }
 }
